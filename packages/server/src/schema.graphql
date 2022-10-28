@@ -1,0 +1,21 @@
+scalar Date
+
+type Query {
+  hello(subject: String): String,
+  getTimeline: FeedTimelineModule,
+}
+
+type FeedTimelineItem {
+  id: ID
+  title: String
+  amount: Float
+  customReferenceText: String
+  currency: String
+  type: String
+  category: String
+  timestamp: Date
+}
+
+type FeedTimelineModule {
+  timelineItems: [FeedTimelineItem]
+}
